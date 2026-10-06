@@ -57,3 +57,19 @@ The causal evaluation uses:
 | Communication-trace evaluation | Communication-trace evaluation cells |
 | D3QN adaptive-selection evaluation | D3QN evaluation cells |
 | Computational profiling | Computational profiling cells |
+
+
+
+## Reproducibility manifest
+
+| Experiment / analysis | Main configuration | Generated output |
+| --- | --- | --- |
+| Stage-1 cooperative perception | Ego and RSU camera-LiDAR fusion with initial V2I cooperative fusion; seeds 7, 17, 27 | `stage1_multiseed_test_results.json`, `stage1_multiseed_statistics.json` |
+| Stage-2 cooperative perception | RSU-to-ego feature-space adjustment with reliability-guided V2I fusion; seeds 7, 17, 27 | `stage2_multiseed_test_results.json`, `stage2_multiseed_statistics.json` |
+| Causal communication evaluation | 37 chronological ego-RSU streams, three-frame history, 889 post-initialization frames | `stage3_causal_multiseed_statistics.csv` |
+| Feature-age analysis | Historical-feature age ranges 1–5, 6–10, 11–20, and >20 frames; seeds 7, 17, 27 | `reviewer3_feature_age_analysis.csv` |
+| Ego-only evaluation | Independently trained ego-only perception; seeds 7, 17, 27; 889 causal frames | `ego_only_causal_889_results.json` |
+| Continued Stage-2 evaluation | Continued Stage-2 cooperative training and evaluation on the same 889 frames | `stage2_continued_causal_889_results.json` |
+| Scene-level bootstrap analysis | Ten held-out scenes with scene-clustered bootstrap evaluation | `scene_level_recovered_vs_ego_bootstrap.json` |
+| Communication-trace analysis | IID packet-loss traces at drop probabilities 0.3, 0.5, and 0.7; 10 traces per seed and probability | `recovered_vs_ego_multiple_traces.json`, `multiple_trace_summary.json` |
+| Matched latency analysis | Batch-size-one profiling of recovered-RSU and adaptive candidate-evaluation pathways | `matched_recovered_vs_adaptive_latency.json` |
