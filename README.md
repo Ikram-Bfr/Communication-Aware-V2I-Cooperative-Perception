@@ -48,21 +48,6 @@ The causal evaluation uses:
 
 
 
-## Reproducibility manifest
-
-The table below links the principal reported results to the corresponding experimental configuration and implementation/output in `Communication_Aware.ipynb`.
-
-| Reported result | Configuration | Seeds | Notebook section / generated output |
-| --- | --- | --- | --- |
-| Stage-1 cooperative reference | Initial cooperative perception with ego and RSU camera-LiDAR fusion, initial V2I fusion, and BEV segmentation decoder | 7, 17, 27 | Stage-1 multi-seed evaluation; `stage1_multiseed_test_results.json`, `stage1_multiseed_statistics.json` |
-| Stage-2 cooperative result | Learned RSU-to-ego feature-space adjustment with reliability-guided V2I fusion | 7, 17, 27 | Stage-2 multi-seed evaluation; `stage2_multiseed_test_results.json`, `stage2_multiseed_statistics.json` |
-| Temporal-recovery validation | Three-frame history, recovery training with `p_drop = 0.5`, current/recovered reception-conditioned evaluation | 7, 17, 27 | Stage-3 temporal-recovery training and validation |
-| Causal communication-interruption evaluation | 37 chronological ego-RSU streams, three-frame causal history, 889 post-initialization frames | 7, 17, 27 | Causal evaluation; `stage3_causal_multiseed_statistics.csv` |
-| Feature-age analysis | Historical RSU features grouped into frame-index age ranges 1-5, 6-10, 11-20, and >20 | 7, 17, 27 | Feature-age analysis; `reviewer3_feature_age_analysis.csv` |
-| Temporal-recovery diagnostics | Proposed recovery, last-received RSU reuse, mean-history aggregation, mismatched history, zero history, zero-RSU diagnostic, and capacity-matched ego-conditioned control | 7, 17, 27 | Temporal-recovery diagnostic section |
-| Independently trained ego-only baseline | Ego camera branch, ego LiDAR branch, local fusion, and segmentation decoder only | 7, 17, 27 | Ego-only controlled baseline; `ego_only_causal_889_results.json` |
-| Continued-training control | Stage-2 cooperative checkpoint further optimized without temporal recovery | 7, 17, 27 | Continued-training control; `stage2_continued_causal_889_results.json` |
-| Scene-level and bootstrap analysis | Ten held-out scenes and scene-clustered bootstrap evaluation | 7, 17, 27 | Scene-level/bootstrap analysis; `scene_level_recovered_vs_ego_bootstrap.json` |
 | Communication-trace variability | Independent IID packet-loss traces at `p_drop = 0.3`, `0.5`, and `0.7`, with 10 traces per seed/probability | 7, 17, 27 | Communication-trace analysis; `recovered_vs_ego_multiple_traces.json`, `multiple_trace_summary.json` |
 | Semantic-class distribution | Valid semantic cells over the 889-frame causal subset and complete 1,000-frame test pool | - | Semantic-distribution analysis section |
 | Computational analysis | Precomputed ego and feature-adjusted RSU BEV features; matched batch-size-one GPU profiling | Seed 7 for matched latency profiling | Computational analysis; `matched_recovered_vs_adaptive_latency.json` |
