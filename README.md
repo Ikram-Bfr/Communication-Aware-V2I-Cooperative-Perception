@@ -8,7 +8,7 @@ This repository contains the implementation and revision-specific reproducibilit
 
 The latest revision-specific implementation is available as:
 
-**v1.1 — Causal Evaluation and Reproducibility Update**
+**Causal Evaluation and Reproducibility Update**
 
 This release corresponds to the revised experimental evaluation and includes the causal, diagnostic, statistical, communication-trace, and computational analyses reported in the revised manuscript.
 
