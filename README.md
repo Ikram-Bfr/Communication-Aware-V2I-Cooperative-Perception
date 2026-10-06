@@ -45,3 +45,15 @@ The causal evaluation uses:
 - 889 post-initialization evaluation frames
 - Causal history updates performed only after successful packet reception
 - The same represented semantic class set and evaluation mask across compared methods
+
+
+| Analysis | Corresponding notebook section |
+|---|---|
+| Causal communication-robustness evaluation | Causal evaluation cells |
+| Independently trained ego-only evaluation | Ego-only evaluation cells |
+| Temporal-recovery diagnostic controls | Temporal-recovery diagnostic cells |
+| Feature-age analysis | Feature-age analysis cells |
+| Scene-level and bootstrap analysis | Scene-level/bootstrap analysis cells |
+| Communication-trace evaluation | Communication-trace evaluation cells |
+| D3QN adaptive-selection evaluation | D3QN evaluation cells |
+| Computational profiling | Computational profiling cells |
