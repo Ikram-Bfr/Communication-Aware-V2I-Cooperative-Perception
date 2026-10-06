@@ -45,9 +45,3 @@ The causal evaluation uses:
 - 889 post-initialization evaluation frames
 - Causal history updates performed only after successful packet reception
 - The same represented semantic class set and evaluation mask across compared methods
-
-
-
-| Communication-trace variability | Independent IID packet-loss traces at `p_drop = 0.3`, `0.5`, and `0.7`, with 10 traces per seed/probability | 7, 17, 27 | Communication-trace analysis; `recovered_vs_ego_multiple_traces.json`, `multiple_trace_summary.json` |
-| Semantic-class distribution | Valid semantic cells over the 889-frame causal subset and complete 1,000-frame test pool | - | Semantic-distribution analysis section |
-| Computational analysis | Precomputed ego and feature-adjusted RSU BEV features; matched batch-size-one GPU profiling | Seed 7 for matched latency profiling | Computational analysis; `matched_recovered_vs_adaptive_latency.json` |
