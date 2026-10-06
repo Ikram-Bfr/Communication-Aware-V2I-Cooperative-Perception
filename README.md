@@ -8,7 +8,7 @@ This repository contains the implementation and revision-specific reproducibilit
 
 The latest revision-specific implementation is available as:
 
-**Causal Evaluation and Reproducibility Update**
+**v1.1 — Causal Evaluation and Reproducibility Update**
 
 This release corresponds to the revised experimental evaluation and includes the causal, diagnostic, statistical, communication-trace, and computational analyses reported in the revised manuscript.
 
@@ -28,7 +28,7 @@ The implementation includes:
 
 ## Reproducibility scope
 
-The public release provides the source implementation and revision-specific analysis cells used to reproduce the reported experiments.
+The public release provides the source implementation and revision-specific analysis cells in `Communication_Aware.ipynb` used to reproduce the reported experiments.
 
 The repository does not include trained checkpoint files. The released implementation specifies the matched random seeds, training configurations, checkpoint-selection criteria, causal-evaluation protocol, semantic-label mappings, and analysis procedures used in the manuscript.
 
@@ -38,7 +38,7 @@ The principal experiments use matched random seeds:
 - 17
 - 27
 
-The final causal evaluation uses:
+The causal evaluation uses:
 
 - 37 chronological ego-RSU streams
 - Three-frame causal RSU history
